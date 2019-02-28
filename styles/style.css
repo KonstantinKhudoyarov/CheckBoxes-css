@@ -1,0 +1,92 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: #00ffd53a;
+}
+
+.list {
+    max-width: 500px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.2);
+}
+
+.list__item {
+    display: flex;
+    border-bottom: 1px solid lightgrey;
+}
+
+.list__check-box {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list__input {
+    display: inline-block;
+}
+
+.list__input {
+    align-self: center;
+    margin: 0 20px;
+}
+
+.list__wrap-text {
+    width: 100%;
+    padding: 20px;
+    border-left: 1px solid lightgrey;
+}
+
+.list__wrap-inner {
+    overflow: hidden;
+}
+
+.list__text {
+    position: relative;
+    font-size: 16px;
+    line-height: 1.4;
+    transition: .2s;
+}
+
+.list__text::after {
+    content: attr(data-words);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    text-decoration: line-through;
+}
+
+.list__item:last-child {
+    border-bottom: none;
+}
+
+.list__input:checked + .list__wrap-text {
+    background-color: rgba(211, 211, 211, 0.2);
+}
+
+.list__input:checked + .list__wrap-text .list__text {
+    transform: translateY(-100%);
+}
