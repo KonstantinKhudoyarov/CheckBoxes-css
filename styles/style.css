@@ -22,6 +22,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 10px;
     height: 100%;
     background: #00ffd53a;
 }
