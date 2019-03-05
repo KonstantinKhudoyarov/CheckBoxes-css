@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Sanchez', serif;
 }
 
 * {
@@ -20,6 +20,7 @@ li {
 
 .wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0 10px;
@@ -91,3 +92,27 @@ li {
 .list__input:checked + .list__wrap-text .list__text {
     transform: translateY(-100%);
 }
+
+.btn {
+    margin-top: 30px;
+    padding: 15px 20px;
+    line-height: 1;
+    color: #fff;
+    background: #20a38d;
+    border-radius: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px 1px rgba(0,0,0,.2);
+    transition: .2s;
+}
+
+.btn:hover {
+    background: #0c9982;
+    box-shadow: 2px 2px 5px 1px rgba(0,0,0,.3);
+}
+
+.btn:active {
+    background: #098d77;
+    transform: translateY(1px);
+    box-shadow: 2px 2px 5px 1px rgba(0,0,0,.1);
+ }

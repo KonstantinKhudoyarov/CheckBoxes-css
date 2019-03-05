@@ -1,7 +1,8 @@
 'use strict'
 
 var checkboxes = document.querySelectorAll('.list__input'),
-    lastChecked;
+    lastChecked,
+    button = document.querySelector('.btn');
 
 function handleCheck(e) {
 
@@ -10,11 +11,9 @@ function handleCheck(e) {
 
     if(context.checked && e.shiftKey) {
         checkboxes.forEach(function(checkbox) {
-            console.log(checkbox);
 
             if(checkbox === context || checkbox === lastChecked) {
                 inBetween = !inBetween;
-                console.log('start');
             }
 
             if(inBetween) {
@@ -27,6 +26,16 @@ function handleCheck(e) {
     lastChecked = context;
 }
 
+function clearCheckBoxes() {
+    checkboxes.forEach(function(checkbox){
+        if(checkbox.checked) {
+            checkbox.checked = false;
+        }
+    });
+}
+
 checkboxes.forEach(function(checkbox) {
     checkbox.addEventListener('click', handleCheck)
 });
+
+button.addEventListener('click', clearCheckBoxes);
